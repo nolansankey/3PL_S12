@@ -39,13 +39,11 @@
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul id="nav" class="nav navbar-nav">
           <li><a href="3pl_home.html">Home</a>
-          <li><a href="3pl_pools.html">Pools</a></li> 
           <li><a href="3pl_picks.html">Full Picks</a></li>
           <li><a href="3pl_stats.html">Statistics</a></li>
           <li><a><strong>Payouts</strong></a></li>
           <li><a href="3pl_rules.html">Rules</a></li>
           <li><a href="3pl_history.html">History</a></li>
-          <!--<li><a href="sbl_home.html"><i>Go to SBL</i></a></li>-->
           <li><a href="javascript:void(0);" onclick="logout()">Logout</a></li>
         </ul>
       </div>
@@ -78,8 +76,7 @@
           <tr>
             <th scope="col" class="std_col">Player</th>
             <th scope="col" class="std_col">Entry Due</th>
-            <th scope="col" class="std_col">Earned (League)</th>
-            <th scope="col" class="wide_col">Earned (Pools)</th>
+            <th scope="col" class="std_col">Earnings</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -156,11 +153,9 @@
             var player_cell = row1.insertCell(0);
             player_cell.innerHTML = earnings_data.values[3+i][2];
             var cella = row1.insertCell(1);
-            cella.innerHTML = earnings_data.values[3+i][7];
+            cella.innerHTML = earnings_data.values[3+i][4];
             var cellb = row1.insertCell(2);
-            cellb.innerHTML = earnings_data.values[3+i][8];
-            var cellc = row1.insertCell(3);
-            cellc.innerHTML = earnings_data.values[3+i][9];    
+            cellb.innerHTML = earnings_data.values[3+i][5];
         }
     }   
     
