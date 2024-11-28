@@ -165,7 +165,7 @@
     <section id="scores-section" class="scores-section">
       <h2>View Scores</h2>
       <p id="scores_text"></p>
-      <form>
+      <!--<form>
         <select name="pool-select" id="pool-select">
             <option value="LEAGUE_pool">League</option>
         </select>
@@ -173,13 +173,14 @@
         <button onclick="getPool()"> Get Scores </button>
         <br/>
         <br>
-    </form>
+    </form> -->
       <table id="scores_table" class="styled-table">
         <thead>
           <tr>
             <th scope="col" class="wide_col">Name</th>
             <th scope="col" class="wide_col">Score</th>
             <th scope="col" class="wide_col">Change</th>
+            <th scope="col" class="wide_col">Picks</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -478,7 +479,7 @@
         var table = document.getElementById("scores_table");
         var curr_user = localStorage.getItem("user");
         for (let i = 0; i < num_payers; i++) {
-            var player = scores_data.values[4+i][5];
+            var player = scores_data.values[4+i][8];
             var row_add = i+1;
             if (player==curr_user){
                 var row_add = i+1;
@@ -487,13 +488,16 @@
             var cell1 = row.insertCell(0);
             cell1.innerHTML = player;
             var cell2 = row.insertCell(1);
-            cell2.innerHTML = scores_data.values[4+i][6];
+            cell2.innerHTML = scores_data.values[4+i][9];
             var cell3 = row.insertCell(2);
-            cell3.innerHTML = scores_data.values[4+i][12];
+            cell3.innerHTML = scores_data.values[4+i][15];
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML = scores_data.values[4+i][16];
             if (player==curr_user){
                 cell1.classList.add("user-cell");
                 cell2.classList.add("user-cell");
                 cell3.classList.add("user-cell");
+                cell4.classList.add("user-cell");
             }
             if (scores_data.values[4+i][10]==1){
                 cell2.classList.add("green_border");
