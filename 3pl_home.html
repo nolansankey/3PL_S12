@@ -163,7 +163,7 @@
 
     <!-- Scoreboard Section -->
     <section id="scores-section" class="scores-section">
-      <h2>View Scores</h2>
+      <h2>Scores</h2>
       <p id="scores_text"></p>
       <!--<form>
         <select name="pool-select" id="pool-select">
@@ -178,9 +178,9 @@
         <thead>
           <tr>
             <th scope="col" class="wide_col">Name</th>
-            <th scope="col" class="wide_col">Score</th>
-            <th scope="col" class="wide_col">Change</th>
-            <th scope="col" class="wide_col">Picks</th>
+            <th scope="col" class="med_col">Score</th>
+            <th scope="col" class="med_col">Change</th>
+            <th scope="col" class="med_col">Picks</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -499,9 +499,9 @@
                 cell3.classList.add("user-cell");
                 cell4.classList.add("user-cell");
             }
-            if (scores_data.values[4+i][10]==1){
+            if (scores_data.values[4+i][12]=="+6"){
                 cell2.classList.add("green_border");
-            }      
+            }  
         }
     }
     
