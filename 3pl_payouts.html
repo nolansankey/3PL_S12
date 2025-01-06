@@ -147,7 +147,7 @@
         let earnings_data = await fetch(earningsSheetLink)    
           .then((response) => response.json());
         var table = document.getElementById("earnings-table");
-        var num_players = 35;
+        var num_players = 32;
         for (let i = 0; i < num_players; i++) {
             var row1 = table.insertRow(i+1);
             var player_cell = row1.insertCell(0);
